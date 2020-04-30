@@ -43,7 +43,8 @@ export default class AnimatedCircularProgress extends React.PureComponent {
       easing,
       duration,
     });
-    anim.start(this.props.onAnimationComplete);
+//     anim.start(this.props.onAnimationComplete);
+    anim.start(()=>{this.reAnimate(0,100,1000,Easing.out(Easing.ease))})
 
     return anim;
   }
